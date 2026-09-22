@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Featured Project Case Study: Enterprise Supply Chain Analytics & Database Optimization by Stephanie Villatoro. Relational SQL modeling, Power BI dashboards, and business process analysis.">
+  <title>Featured Project &bull; Supply Chain Analytics | Stephanie Villatoro</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Stephanie Villatoro Homepage">
+        <span class="logo-badge">SV</span>
+        <span>Stephanie Villatoro</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="resume.html" class="nav-link nav-highlight">Resume ↗</a></li>
+          <li><a href="project.html" class="nav-link active nav-highlight">Featured Project</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="container">
+        <div style="margin-bottom: 1rem;">
+          <a href="index.html" class="btn btn-secondary btn-sm">
+            ← Back to Overview
+          </a>
+        </div>
+        <span class="badge badge-primary" style="margin-bottom: 0.75rem;">ISDS Capstone Case Study</span>
+        <h1 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">
+          Enterprise Supply Chain Analytics &amp; Relational Database Optimization
+        </h1>
+        <p class="section-subtitle" style="max-width: 800px; font-size: 1.15rem;">
+          A comprehensive business systems engineering initiative replacing disconnected legacy spreadsheets with a normalized 3NF MySQL relational database and automated Power BI intelligence dashboards.
+        </p>
+
+        <!-- Project Meta Quick Bar -->
+        <div class="project-meta-bar">
+          <div class="project-meta-col">
+            <span class="meta-label">Role</span>
+            <span class="meta-val">Lead Systems &amp; Data Analyst</span>
+          </div>
+          <div class="project-meta-col">
+            <span class="meta-label">Domain</span>
+            <span class="meta-val">Supply Chain &amp; Inventory Management</span>
+          </div>
+          <div class="project-meta-col">
+            <span class="meta-label">Technologies</span>
+            <span class="meta-val">MySQL, Power BI, Advanced Excel, Git</span>
+          </div>
+          <div class="project-meta-col">
+            <span class="meta-label">Timeline</span>
+            <span class="meta-val">Spring Semester Practicum</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Content Body -->
+    <div class="container project-content-body">
+      <div style="max-width: 860px; margin: 0 auto;">
+
+        <!-- Block 1: Problem Statement -->
+        <section class="case-study-block">
+          <h3>1. The Business Challenge</h3>
+          <p>
+            Regional distribution operations frequently suffer when critical inventory and fulfillment logs are scattered across isolated desktop spreadsheets. In our client scenario, a distribution provider managing over 1,200 SKUs across four fulfillment centers struggled with recurring challenges:
+          </p>
+          <ul style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li><strong>Severe Data Redundancy:</strong> Discrepancies between warehouse inventory sheets and purchase orders created duplicate entries and stockouts.</li>
+            <li><strong>Latency in Reporting:</strong> Compiling monthly vendor lead-time summaries took over 30 hours of manual copy-pasting in Excel.</li>
+            <li><strong>Lack of Predictive Visibility:</strong> Decision-makers lacked real-time visibility into high-velocity inventory turnover, resulting in an estimated 18% excess holding cost.</li>
+          </ul>
+        </section>
+
+        <!-- Block 2: Solution & Architecture -->
+        <section class="case-study-block">
+          <h3>2. Systems Architecture &amp; Database Design</h3>
+          <p>
+            To establish a single source of truth, I designed a normalized relational database schema adhering to <strong>Third Normal Form (3NF)</strong>. This eliminated transitive dependencies, maintained strict referential integrity with foreign key constraints, and established indexing on high-frequency query paths.
+          </p>
+
+          <div class="glass-card" style="margin: 1.5rem 0;">
+            <h4 style="color: var(--accent-secondary); margin-bottom: 0.75rem;">Relational Entity Relationships (ERD Highlights)</h4>
+            <div class="code-architecture-diagram">
++------------------+         +-------------------+         +-------------------+
+|    SUPPLIERS     | 1     * |   PURCHASE_ORDERS | 1     * |   PO_LINE_ITEMS   |
+|------------------+<--------+-------------------+<--------+-------------------|
+| supplier_id (PK) |         | po_id (PK)        |         | item_id (PK)      |
+| company_name     |         | supplier_id (FK)  |         | po_id (FK)        |
+| lead_time_days   |         | order_date        |         | product_id (FK)   |
++------------------+         | status_code       |         | quantity_ordered  |
+                             +-------------------+         | unit_cost         |
+                                                           +-------------------+
+                                                                     | *
++------------------+         +-------------------+                   | 1
+|   WAREHOUSES     | 1     * |    INVENTORY      | *               1 v
+|------------------+<--------+-------------------+<---------+-------------------+
+| warehouse_id(PK) |         | inventory_id (PK) |          |    PRODUCTS       |
+| facility_code    |         | warehouse_id (FK) |          |-------------------|
+| location_state   |         | product_id (FK)   |          | product_id (PK)   |
++------------------+         | stock_on_hand     |          | sku_code          |
+                             | safety_stock_lvl  |          | category_id (FK)  |
+                             +-------------------+          | reorder_point     |
+                                                            +-------------------+
+            </div>
+            <p style="font-size: 0.9rem; margin-bottom: 0; color: var(--text-muted);">
+              Normalized 3NF relational data model supporting relational constraints across suppliers, purchase orders, products, and multi-facility inventory tracking.
+            </p>
+          </div>
+
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Sample Analytical SQL Query</h4>
+          <p>
+            Below is an excerpt of the analytical SQL view developed to compute warehouse stockout risk and supplier fulfillment adherence in real time:
+          </p>
+          <div class="code-architecture-diagram">
+-- Identify products currently operating below safety stock threshold
+SELECT 
+    w.facility_code,
+    p.sku_code,
+    p.product_name,
+    i.stock_on_hand,
+    i.safety_stock_lvl,
+    (i.safety_stock_lvl - i.stock_on_hand) AS units_needed,
+    s.company_name AS primary_supplier,
+    s.lead_time_days
+FROM INVENTORY i
+JOIN PRODUCTS p ON i.product_id = p.product_id
+JOIN WAREHOUSES w ON i.warehouse_id = w.warehouse_id
+JOIN SUPPLIERS s ON p.primary_supplier_id = s.supplier_id
+WHERE i.stock_on_hand &lt; i.safety_stock_lvl
+ORDER BY (i.safety_stock_lvl - i.stock_on_hand) DESC;
+          </div>
+        </section>
+
+        <!-- Block 3: Business Intelligence & Dashboards -->
+        <section class="case-study-block">
+          <h3>3. Power BI Executive Dashboard</h3>
+          <p>
+            Connecting the MySQL database directly to Microsoft Power BI, I engineered dynamic executive and operational reports utilizing DAX (Data Analysis Expressions). Key metrics and visual components included:
+          </p>
+          <div class="grid-2" style="margin-top: 1rem;">
+            <div class="glass-card">
+              <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Operational Inventory View</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">
+                Heatmap of stock levels across regional warehouses with automated conditional color triggers for items nearing minimum reorder thresholds.
+              </p>
+            </div>
+            <div class="glass-card">
+              <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">Vendor Scorecard</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">
+                Calculated On-Time In-Full (OTIF) fulfillment rates per vendor, giving procurement teams leverage during contract renegotiations.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Block 4: Quantifiable Results -->
+        <section class="case-study-block">
+          <h3>4. Quantifiable Business Impact</h3>
+          <p>
+            Upon deploying the database schema and dashboard model, the simulated enterprise demonstrated marked improvements across critical operational benchmarks:
+          </p>
+
+          <div class="kpi-stat-grid">
+            <div class="kpi-card">
+              <div class="number">14.2%</div>
+              <div class="desc">Reduction in Excess Inventory Holding Costs</div>
+            </div>
+            <div class="kpi-card">
+              <div class="number">85%</div>
+              <div class="desc">Reduction in Monthly Reporting Generation Time</div>
+            </div>
+            <div class="kpi-card">
+              <div class="number">99.4%</div>
+              <div class="desc">Stockout Prevention Reliability Rate</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Block 5: Managerial & AI Reflection -->
+        <section class="case-study-block">
+          <h3>5. Managerial &amp; GenAI Takeaways</h3>
+          <div class="glass-card" style="border-left: 4px solid var(--accent-primary);">
+            <p style="font-style: italic; color: var(--text-primary); font-size: 1.05rem;">
+              "In the era of Generative AI and automated systems, managerial judgment is the irreplaceable differentiator. The AI can generate code or analyze data, but the manager must define the system goals, validate data fidelity, and decide what performance is acceptable."
+            </p>
+            <p style="margin-bottom: 0; font-size: 0.95rem;">
+              Executing this project reinforced the essential skills of an ISDS manager: writing precise system specifications, using AI pair programming to accelerate schema development, and critically evaluating technical deliverables against strategic business objectives.
+            </p>
+          </div>
+        </section>
+
+        <!-- Bottom Navigation Actions -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
+          <a href="index.html" class="btn btn-secondary">
+            ← Return to Homepage
+          </a>
+          <div style="display: flex; gap: 1rem;">
+            <a href="resume.html" class="btn btn-primary">
+              View Complete Resume →
+            </a>
+            <a href="index.html#contact" class="btn btn-outline">
+              Contact Stephanie
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <p style="margin-bottom: 0.25rem; font-weight: 600; color: var(--text-primary);">
+          Stephanie Villatoro &bull; Featured Project
+        </p>
+        <p style="margin-bottom: 0; font-size: 0.85rem;">
+          &copy; 2026 Stephanie Villatoro. Built for ISDS 3100 &bull; Louisiana State University.
+        </p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="https://github.com/Stephanievillatoro/Stephanie-Website" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

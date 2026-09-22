@@ -1,130 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Stephen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Stephanie Villatoro, Information Systems & Decision Sciences (ISDS) student at Louisiana State University. Specializing in business analytics, database systems, and technology solutions.">
+  <meta name="keywords" content="Stephanie Villatoro, ISDS, Information Systems, Business Analytics, SQL, LSU, Portfolio, Resume">
+  <meta name="author" content="Stephanie Villatoro">
+  <title>Stephanie Villatoro | ISDS &amp; Business Analytics Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Stephen</h1>
-        <p><strong>Information Systems &amp; Decision Sciences Student</strong></p>
-        <address>
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Stephanie Villatoro Homepage">
+        <span class="logo-badge">SV</span>
+        <span>Stephanie Villatoro</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="resume.html" class="nav-link nav-highlight">Resume ↗</a></li>
+          <li><a href="project.html" class="nav-link nav-highlight">Featured Project ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-content">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          ISDS Student &amp; Aspiring Systems Analyst
+        </div>
+        <h1 class="hero-title">
+          Bridging Business Strategy with <span class="text-gradient">Data &amp; Technology</span>
+        </h1>
+        <p class="hero-subtitle">
+          Welcome! I am an Information Systems &amp; Decision Sciences (ISDS) student at Louisiana State University. I focus on database management, operational analytics, systems modeling, and modern AI-driven problem solving.
+        </p>
+
+        <div class="hero-meta">
+          <span class="hero-meta-item">📍 Baton Rouge, LA</span>
+          <span class="hero-meta-item">🎓 Louisiana State University</span>
+          <span class="hero-meta-item">📅 Class of 2026</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="resume.html" class="btn btn-primary" id="heroResumeBtn">
+            View Complete Resume
+            <span>→</span>
+          </a>
+          <a href="project.html" class="btn btn-secondary" id="heroProjectBtn">
+            Explore Featured Project
+          </a>
+          <a href="#contact" class="btn btn-outline" id="heroContactBtn">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Profile</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">A brief overview of my background, academic focus, and professional objectives.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="profile-narrative">
             <p>
-                Email: <a href="mailto:stephen@example.com">stephen@example.com</a><br>
-                Phone: <a href="tel:+15551234567">(555) 123-4567</a><br>
-                Location: Baton Rouge, Louisiana<br>
-                LinkedIn: <a href="https://linkedin.com">linkedin.com/in/example</a><br>
-                GitHub: <a href="https://github.com">github.com/example</a>
+              I am a driven Information Systems &amp; Decision Sciences student passionate about transforming complex business challenges into intuitive, data-driven solutions. My coursework and hands-on projects bridge technical implementation—such as SQL relational schemas and analytics dashboards—with strategic decision-making.
             </p>
-        </address>
-    </header>
-
-    <hr>
-
-    <main>
-        <section>
-            <h2>About Me</h2>
             <p>
-                Motivated Information Systems and Decision Sciences student with an interest in business analytics, 
-                data management, web technologies, and systems analysis. Experienced in problem solving, academic projects, 
-                and leveraging technology to optimize business operations.
+              In today's evolving technological landscape, I embrace modern software tools and generative AI workflows to streamline operations, analyze performance metrics, and build repeatable, high-performing systems for organizational success.
             </p>
-        </section>
+            <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <span class="badge badge-primary">Relational Databases</span>
+              <span class="badge badge-emerald">Business Intelligence</span>
+              <span class="badge">Systems Design</span>
+              <span class="badge">GenAI Pair Programming</span>
+            </div>
+          </div>
 
-        <hr>
+          <div class="stat-card-group">
+            <div class="stat-card">
+              <span class="stat-value">B.S.</span>
+              <span class="stat-label">ISDS Major, LSU</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">2026</span>
+              <span class="stat-label">Expected Graduation</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">3+</span>
+              <span class="stat-label">Core Database &amp; BI Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Dean's Honor List Recognition</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Education</h2>
-            <article>
-                <h3>Bachelor of Science in Information Systems &amp; Decision Sciences</h3>
-                <p><strong>Louisiana State University</strong> | Expected Graduation: May 2026</p>
-                <p><strong>Relevant Coursework:</strong></p>
-                <ul>
-                    <li>Database Management Systems</li>
-                    <li>Business Information Systems Development</li>
-                    <li>Data Analytics &amp; Visualization</li>
-                    <li>Systems Analysis and Design</li>
-                    <li>Enterprise Architecture &amp; Cloud Fundamentals</li>
-                </ul>
-            </article>
-        </section>
+    <!-- Skills / Competencies Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title">Technical &amp; Professional Skills</h2>
+          <p class="section-subtitle">Core technical capabilities, platforms, and analytical proficiencies developed through coursework and practical application.</p>
+        </div>
 
-        <hr>
-
-        <section>
-            <h2>Technical &amp; Professional Skills</h2>
-            <dl>
-                <dt><strong>Programming &amp; Web</strong></dt>
-                <dd>HTML5, SQL, Python, Basic Shell Scripting</dd>
-
-                <dt><strong>Data &amp; Analytics Tools</strong></dt>
-                <dd>Microsoft Excel (Advanced Formulas, PivotTables), Power BI, MySQL</dd>
-
-                <dt><strong>Productivity &amp; Collaboration</strong></dt>
-                <dd>Git, GitHub, Microsoft Office 365, Project Documentation</dd>
-
-                <dt><strong>Core Competencies</strong></dt>
-                <dd>Requirements Gathering, Process Flow Modeling, Data Analysis, Critical Thinking</dd>
-            </dl>
-        </section>
-
-        <hr>
-
-        <section>
-            <h2>Experience</h2>
-            <article>
-                <h3>Student Information Technology Assistant</h3>
-                <p><em>Campus IT Services</em> | August 2024 &ndash; Present</p>
-                <ul>
-                    <li>Assisted students and faculty with technical troubleshooting and hardware configuration.</li>
-                    <li>Documented recurring system issues and reported hardware/software tickets in the service desk platform.</li>
-                    <li>Collaborated with senior technicians to deploy and test lab workstation software images.</li>
-                </ul>
-            </article>
-
-            <article>
-                <h3>Business Project Analyst (Academic Practicum)</h3>
-                <p><em>ISDS Course Project</em> | January 2025 &ndash; May 2025</p>
-                <ul>
-                    <li>Analyzed operational workflow bottlenecks for a simulated supply chain client.</li>
-                    <li>Designed an entity-relationship diagram (ERD) and relational database schema in SQL.</li>
-                    <li>Presented final findings and data visualizations to a panel of faculty evaluators.</li>
-                </ul>
-            </article>
-        </section>
-
-        <hr>
-
-        <section>
-            <h2>Academic Projects</h2>
-            <article>
-                <h3>Course Management Database Design</h3>
-                <p>Designed a normalized relational database schema (3NF) to track student enrollments, course prerequisites, and grade reporting.</p>
-            </article>
-            <article>
-                <h3>E-Commerce Sales Performance Dashboard</h3>
-                <p>Developed an interactive reporting model summarizing regional revenue trends, customer lifetime value, and return rates.</p>
-            </article>
-        </section>
-
-        <hr>
-
-        <section>
-            <h2>Certifications &amp; Achievements</h2>
-            <ul>
-                <li>Dean's Honor List &ndash; College of Business</li>
-                <li>Certified in Excel for Business &ndash; Coursera / Macquarie University</li>
+        <div class="grid-4">
+          <!-- Card 1 -->
+          <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3 class="skill-category-title">Programming &amp; Web</h3>
+            <ul class="skill-tag-list">
+              <li class="skill-tag">SQL (MySQL/PostgreSQL)</li>
+              <li class="skill-tag">HTML5 &amp; Vanilla CSS3</li>
+              <li class="skill-tag">JavaScript Fundamentals</li>
+              <li class="skill-tag">Python for Data Analysis</li>
+              <li class="skill-tag">Shell Scripting</li>
             </ul>
-        </section>
-    </main>
+          </div>
 
-    <hr>
+          <!-- Card 2 -->
+          <div class="skill-card">
+            <div class="skill-icon">📊</div>
+            <h3 class="skill-category-title">Data &amp; Analytics</h3>
+            <ul class="skill-tag-list">
+              <li class="skill-tag">Power BI Dashboards</li>
+              <li class="skill-tag">Advanced Microsoft Excel</li>
+              <li class="skill-tag">PivotTables &amp; VLOOKUP/XLOOKUP</li>
+              <li class="skill-tag">Data Modeling &amp; Normalization</li>
+              <li class="skill-tag">KPI Formulation</li>
+            </ul>
+          </div>
 
-    <footer>
-        <p><small>&copy; 2026 Stephen. All rights reserved.</small></p>
-    </footer>
+          <!-- Card 3 -->
+          <div class="skill-card">
+            <div class="skill-icon">⚙️</div>
+            <h3 class="skill-category-title">Systems &amp; Management</h3>
+            <ul class="skill-tag-list">
+              <li class="skill-tag">Requirements Gathering</li>
+              <li class="skill-tag">Process Flow Modeling</li>
+              <li class="skill-tag">Entity-Relationship Diagrams (ERD)</li>
+              <li class="skill-tag">Agile &amp; Pair Programming</li>
+              <li class="skill-tag">Enterprise Architecture</li>
+            </ul>
+          </div>
 
+          <!-- Card 4 -->
+          <div class="skill-card">
+            <div class="skill-icon">🛠️</div>
+            <h3 class="skill-category-title">Tools &amp; Platforms</h3>
+            <ul class="skill-tag-list">
+              <li class="skill-tag">Git &amp; GitHub Version Control</li>
+              <li class="skill-tag">Microsoft Office 365 Suite</li>
+              <li class="skill-tag">IT Service Desk Platforms</li>
+              <li class="skill-tag">Generative AI Tools &amp; IDEs</li>
+              <li class="skill-tag">Cloud Basics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Experience</span>
+          <h2 class="section-title">Employment &amp; Practicums</h2>
+          <p class="section-subtitle">Professional roles held and practical academic practicums demonstrating real-world problem solving.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Role 1 -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="role-title">Student Information Technology Assistant</h3>
+                <span class="company-name">Campus IT Services | Louisiana State University</span>
+              </div>
+              <span class="timeline-date">August 2024 &ndash; Present</span>
+            </div>
+            <ul class="timeline-duties">
+              <li>Provide frontline technical support and hardware diagnostics for campus students, faculty, and administrative staff.</li>
+              <li>Triage and document incoming issues in the centralized ticketing platform, ensuring timely escalation and resolution.</li>
+              <li>Collaborate with senior technicians to test, configure, and deploy standardized academic software workstation images across campus computer labs.</li>
+            </ul>
+          </article>
+
+          <!-- Role 2 -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div>
+                <h3 class="role-title">Business Project Analyst (Academic Practicum)</h3>
+                <span class="company-name">ISDS Course Practicum | E. J. Ourso College of Business</span>
+              </div>
+              <span class="timeline-date">January 2025 &ndash; May 2025</span>
+            </div>
+            <ul class="timeline-duties">
+              <li>Conducted workflow and operational bottleneck analysis for a simulated enterprise distribution client.</li>
+              <li>Architected an entity-relationship diagram (ERD) and created a relational SQL database normalized to Third Normal Form (3NF).</li>
+              <li>Synthesized inventory and fulfillment data into interactive executive dashboards and presented actionable recommendations to faculty evaluators.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hybrid Bridges: Standalone Pages Teasers -->
+    <section class="section" id="deep-dives">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">In-Depth Highlights</span>
+          <h2 class="section-title">Expanded Portfolios &amp; Case Studies</h2>
+          <p class="section-subtitle">Explore my comprehensive standalone pages designed for detailed evaluation by recruiters and hiring managers.</p>
+        </div>
+
+        <!-- Callout 1: Resume -->
+        <div class="feature-banner">
+          <div class="feature-banner-content">
+            <span class="feature-banner-tag">Complete Curriculum Vitae</span>
+            <h3 class="feature-banner-title">Recruiter-Ready Resume &amp; Coursework</h3>
+            <p class="feature-banner-desc">
+              Review my full educational record at LSU, detailed course breakdown across database management and systems analysis, complete work history, and certifications. Printable and formatted for immediate review.
+            </p>
+            <a href="resume.html" class="btn btn-primary" id="bannerResumeLink">
+              View Detailed Resume
+              <span>→</span>
+            </a>
+          </div>
+          <div>
+            <span style="font-size: 4rem; opacity: 0.7;">📄</span>
+          </div>
+        </div>
+
+        <!-- Callout 2: Project -->
+        <div class="feature-banner">
+          <div class="feature-banner-content">
+            <span class="feature-banner-tag">Featured Project Case Study</span>
+            <h3 class="feature-banner-title">Enterprise Supply Chain Analytics &amp; Database Optimization</h3>
+            <p class="feature-banner-desc">
+              A deep dive into how I engineered an end-to-end relational data model in SQL and integrated Power BI dashboards to optimize inventory turnover and reduce stockout risks.
+            </p>
+            <a href="project.html" class="btn btn-secondary" id="bannerProjectLink">
+              Read Project Case Study
+              <span>→</span>
+            </a>
+          </div>
+          <div>
+            <span style="font-size: 4rem; opacity: 0.7;">📈</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Open to internships, analytics roles, and professional opportunities. Feel free to connect or send a message.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <p>
+              I am actively seeking internship and entry-level positions in Information Systems, Business Intelligence, Data Analysis, and Systems Consulting. Let's start a conversation!
+            </p>
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon-box">✉️</div>
+                <div>
+                  <strong>Email</strong><br>
+                  <a href="mailto:svillatoro@lsu.edu">svillatoro@lsu.edu</a>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon-box">📱</div>
+                <div>
+                  <strong>Phone</strong><br>
+                  <span>(225) 578-3202</span>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon-box">📍</div>
+                <div>
+                  <strong>Location</strong><br>
+                  <span>Baton Rouge, Louisiana</span>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon-box">💼</div>
+                <div>
+                  <strong>Professional Links</strong><br>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a> &bull; 
+                  <a href="https://github.com/Stephanievillatoro" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form with JS validation -->
+          <div class="glass-card">
+            <div id="formStatus" style="display: none;"></div>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Your Name</label>
+                <input type="text" id="contactName" class="form-input" placeholder="e.g. Jane Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="e.g. recruiter@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject</label>
+                <input type="text" id="contactSubject" class="form-input" placeholder="Internship Inquiry / Project Discussion" required>
+              </div>
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea id="contactMessage" class="form-textarea" placeholder="Write your message here..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="sendMessageBtn">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <p style="margin-bottom: 0.25rem; font-weight: 600; color: var(--text-primary);">
+          Stephanie Villatoro
+        </p>
+        <p style="margin-bottom: 0; font-size: 0.85rem;">
+          &copy; 2026 Stephanie Villatoro. Built for ISDS 3100 &bull; Louisiana State University.
+        </p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/Stephanievillatoro/Stephanie-Website" target="_blank" rel="noopener noreferrer">GitHub Repo</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
