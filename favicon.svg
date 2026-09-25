@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="svGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0b0f19"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#svGrad)" fill-opacity="0.15" stroke="url(#svGrad)" stroke-width="2"/>
+  <text x="32" y="42" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="26" font-weight="800" fill="#f8fafc" text-anchor="middle" letter-spacing="-1">SV</text>
+  <circle cx="50" cy="18" r="4" fill="#10b981"/>
+</svg>
