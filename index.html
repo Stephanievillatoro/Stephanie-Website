@@ -25,6 +25,7 @@
 
       <nav>
         <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
@@ -39,35 +40,47 @@
   <main>
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
-      <div class="container hero-content">
-        <div class="hero-pill">
-          <span class="hero-pill-dot"></span>
-          ISDS Student &amp; Aspiring Systems Analyst
-        </div>
-        <h1 class="hero-title">
-          Bridging Business Strategy with <span class="text-gradient">Data &amp; Technology</span>
-        </h1>
-        <p class="hero-subtitle">
-          Welcome! I am an Information Systems &amp; Decision Sciences (ISDS) student at Louisiana State University. I focus on database management, operational analytics, systems modeling, and modern AI-driven problem solving.
-        </p>
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            ISDS Student &amp; Aspiring Systems Analyst
+          </div>
+          <h1 class="hero-title">
+            Bridging Business Strategy with <span class="text-gradient">Data &amp; Technology</span>
+          </h1>
+          <p class="hero-subtitle">
+            Welcome! I am an Information Systems &amp; Decision Sciences (ISDS) student at Louisiana State University. I focus on database management, operational analytics, systems modeling, and modern AI-driven problem solving.
+          </p>
 
-        <div class="hero-meta">
-          <span class="hero-meta-item">📍 Baton Rouge, LA</span>
-          <span class="hero-meta-item">🎓 Louisiana State University</span>
-          <span class="hero-meta-item">📅 Class of 2026</span>
+          <div class="hero-meta">
+            <span class="hero-meta-item">📍 Baton Rouge, LA</span>
+            <span class="hero-meta-item">🎓 Louisiana State University</span>
+            <span class="hero-meta-item">📅 Class of 2026</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="resume.html" class="btn btn-primary" id="heroResumeBtn">
+              View Complete Resume
+              <span>→</span>
+            </a>
+            <a href="project.html" class="btn btn-secondary" id="heroProjectBtn">
+              Explore Featured Project
+            </a>
+            <a href="#contact" class="btn btn-outline" id="heroContactBtn">
+              Get In Touch
+            </a>
+          </div>
         </div>
 
-        <div class="hero-actions">
-          <a href="resume.html" class="btn btn-primary" id="heroResumeBtn">
-            View Complete Resume
-            <span>→</span>
-          </a>
-          <a href="project.html" class="btn btn-secondary" id="heroProjectBtn">
-            Explore Featured Project
-          </a>
-          <a href="#contact" class="btn btn-outline" id="heroContactBtn">
-            Get In Touch
-          </a>
+        <div class="hero-visual">
+          <div class="hero-avatar-wrapper">
+            <img src="images/stephanie_portrait.jpg" alt="Stephanie Villatoro - ISDS Student at LSU" class="hero-avatar-img">
+            <div class="hero-avatar-badge">
+              <span class="badge-status-dot"></span>
+              <span>Open to Opportunities &bull; LSU '26</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -269,8 +282,8 @@
               <span>→</span>
             </a>
           </div>
-          <div>
-            <span style="font-size: 4rem; opacity: 0.7;">📈</span>
+          <div class="feature-banner-image-box">
+            <img src="images/supply_chain_dashboard.jpg" alt="Enterprise Supply Chain Power BI Dashboard Preview" class="feature-banner-img">
           </div>
         </div>
       </div>
