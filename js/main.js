@@ -70,13 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // Simulate sending
       setTimeout(() => {
         formStatus.style.display = 'block';
-        formStatus.style.background = 'rgba(16, 185, 129, 0.15)';
-        formStatus.style.color = '#10b981';
-        formStatus.style.border = '1px solid rgba(16, 185, 129, 0.3)';
-        formStatus.style.padding = '0.75rem 1rem';
+        formStatus.style.background = 'rgba(212, 175, 55, 0.15)';
+        formStatus.style.color = '#F7E7BE';
+        formStatus.style.border = '1px solid rgba(212, 175, 55, 0.45)';
+        formStatus.style.padding = '0.85rem 1.15rem';
         formStatus.style.borderRadius = '8px';
-        formStatus.style.marginBottom = '1rem';
-        formStatus.innerHTML = '✓ Thank you! Your message has been sent successfully. I will get back to you soon.';
+        formStatus.style.marginBottom = '1.25rem';
+        formStatus.style.fontWeight = '500';
+        formStatus.innerHTML = '✦ Thank you! Your message has been sent successfully. I will get back to you soon.';
         
         contactForm.reset();
         submitBtn.disabled = false;

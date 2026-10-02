@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Featured Project Case Study: Enterprise Supply Chain Analytics & Database Optimization by Stephanie Villatoro. Relational SQL modeling, Power BI dashboards, and business process analysis.">
-  <title>Featured Project &bull; Supply Chain Analytics | Stephanie Villatoro</title>
+  <meta name="description" content="Featured Project: Building a Professional Portfolio Website & Learning Vibecoding Skills by Stephanie Villatoro. AI-assisted web development, iterative design, and emerging technology skills.">
+  <title>Featured Project &bull; Website Creation &amp; Vibecoding | Stephanie Villatoro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -45,31 +48,31 @@
             ← Back to Overview
           </a>
         </div>
-        <span class="badge badge-primary" style="margin-bottom: 0.75rem;">ISDS Capstone Case Study</span>
+        <span class="badge badge-primary" style="margin-bottom: 0.75rem;">Featured Project</span>
         <h1 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">
-          Enterprise Supply Chain Analytics &amp; Relational Database Optimization
+          Building This Portfolio Website &amp; Learning to Vibecode
         </h1>
         <p class="section-subtitle" style="max-width: 800px; font-size: 1.15rem;">
-          A comprehensive business systems engineering initiative replacing disconnected legacy spreadsheets with a normalized 3NF MySQL relational database and automated Power BI intelligence dashboards.
+          How I created a professional web presence from scratch using vibecoding &mdash; the practice of collaborating with AI tools to design, build, and iterate on a fully functional website.
         </p>
 
         <!-- Project Meta Quick Bar -->
         <div class="project-meta-bar">
           <div class="project-meta-col">
             <span class="meta-label">Role</span>
-            <span class="meta-val">Lead Systems &amp; Data Analyst</span>
+            <span class="meta-val">Designer &amp; Developer</span>
           </div>
           <div class="project-meta-col">
             <span class="meta-label">Domain</span>
-            <span class="meta-val">Supply Chain &amp; Inventory Management</span>
+            <span class="meta-val">Web Development &amp; Personal Branding</span>
           </div>
           <div class="project-meta-col">
             <span class="meta-label">Technologies</span>
-            <span class="meta-val">MySQL, Power BI, Advanced Excel, Git</span>
+            <span class="meta-val">HTML, CSS, JavaScript, AI Tools</span>
           </div>
           <div class="project-meta-col">
             <span class="meta-label">Timeline</span>
-            <span class="meta-val">Spring Semester Practicum</span>
+            <span class="meta-val">Fall 2026</span>
           </div>
         </div>
       </div>
@@ -79,143 +82,110 @@
     <div class="container project-content-body">
       <div style="max-width: 860px; margin: 0 auto;">
 
-        <!-- Block 1: Problem Statement -->
+        <!-- Block 1: The Idea -->
         <section class="case-study-block">
-          <h3>1. The Business Challenge</h3>
+          <h3>1. The Starting Point</h3>
           <p>
-            Regional distribution operations frequently suffer when critical inventory and fulfillment logs are scattered across isolated desktop spreadsheets. In our client scenario, a distribution provider managing over 1,200 SKUs across four fulfillment centers struggled with recurring challenges:
+            As an Accounting and Information Systems &amp; Analytics student, I knew that having a professional online presence was important &mdash; but I had no formal training in web development. Rather than let that be a barrier, I decided to learn by doing. I set out to build a portfolio website that would genuinely represent who I am, what I've accomplished, and where I'm headed.
+          </p>
+          <p>
+            This project became my introduction to <strong>vibecoding</strong> &mdash; a modern approach to development where you collaborate with AI tools by describing what you want in natural language, then refine and iterate on the results. It's not about knowing every line of code from memory; it's about understanding what you need and knowing how to communicate effectively with technology to get there.
+          </p>
+        </section>
+
+        <!-- Block 2: What I Built -->
+        <section class="case-study-block">
+          <h3>2. What I Built</h3>
+          <p>
+            The website you're viewing right now is the finished product. It includes:
           </p>
           <ul style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-            <li><strong>Severe Data Redundancy:</strong> Discrepancies between warehouse inventory sheets and purchase orders created duplicate entries and stockouts.</li>
-            <li><strong>Latency in Reporting:</strong> Compiling monthly vendor lead-time summaries took over 30 hours of manual copy-pasting in Excel.</li>
-            <li><strong>Lack of Predictive Visibility:</strong> Decision-makers lacked real-time visibility into high-velocity inventory turnover, resulting in an estimated 18% excess holding cost.</li>
+            <li><strong>A responsive homepage</strong> with sections for About Me, Skills, Experience, and Contact &mdash; all tailored to present my academic and professional background.</li>
+            <li><strong>A dedicated resume page</strong> designed to give recruiters a comprehensive, printable view of my credentials, coursework, and certifications.</li>
+            <li><strong>This project page</strong> documenting my process and what I learned along the way.</li>
+            <li><strong>A polished visual design</strong> with a cohesive color palette, modern typography, smooth animations, and a fully mobile-responsive layout.</li>
           </ul>
-        </section>
-
-        <!-- Block 2: Solution & Architecture -->
-        <section class="case-study-block">
-          <h3>2. Systems Architecture &amp; Database Design</h3>
-          <p>
-            To establish a single source of truth, I designed a normalized relational database schema adhering to <strong>Third Normal Form (3NF)</strong>. This eliminated transitive dependencies, maintained strict referential integrity with foreign key constraints, and established indexing on high-frequency query paths.
-          </p>
 
           <div class="glass-card" style="margin: 1.5rem 0;">
-            <h4 style="color: var(--accent-secondary); margin-bottom: 0.75rem;">Relational Entity Relationships (ERD Highlights)</h4>
-            <div class="code-architecture-diagram">
-+------------------+         +-------------------+         +-------------------+
-|    SUPPLIERS     | 1     * |   PURCHASE_ORDERS | 1     * |   PO_LINE_ITEMS   |
-|------------------+<--------+-------------------+<--------+-------------------|
-| supplier_id (PK) |         | po_id (PK)        |         | item_id (PK)      |
-| company_name     |         | supplier_id (FK)  |         | po_id (FK)        |
-| lead_time_days   |         | order_date        |         | product_id (FK)   |
-+------------------+         | status_code       |         | quantity_ordered  |
-                             +-------------------+         | unit_cost         |
-                                                           +-------------------+
-                                                                     | *
-+------------------+         +-------------------+                   | 1
-|   WAREHOUSES     | 1     * |    INVENTORY      | *               1 v
-|------------------+<--------+-------------------+<---------+-------------------+
-| warehouse_id(PK) |         | inventory_id (PK) |          |    PRODUCTS       |
-| facility_code    |         | warehouse_id (FK) |          |-------------------|
-| location_state   |         | product_id (FK)   |          | product_id (PK)   |
-+------------------+         | stock_on_hand     |          | sku_code          |
-                             | safety_stock_lvl  |          | category_id (FK)  |
-                             +-------------------+          | reorder_point     |
-                                                            +-------------------+
+            <h4 style="color: var(--accent-secondary); margin-bottom: 0.75rem;">Technologies Used</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.65rem;">
+              <span class="badge badge-primary">HTML5</span>
+              <span class="badge badge-primary">CSS3</span>
+              <span class="badge badge-primary">JavaScript</span>
+              <span class="badge badge-emerald">AI-Assisted Development</span>
+              <span class="badge badge-emerald">Responsive Design</span>
+              <span class="badge">Git &amp; GitHub</span>
             </div>
-            <p style="font-size: 0.9rem; margin-bottom: 0; color: var(--text-muted);">
-              Normalized 3NF relational data model supporting relational constraints across suppliers, purchase orders, products, and multi-facility inventory tracking.
-            </p>
-          </div>
-
-          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Sample Analytical SQL Query</h4>
-          <p>
-            Below is an excerpt of the analytical SQL view developed to compute warehouse stockout risk and supplier fulfillment adherence in real time:
-          </p>
-          <div class="code-architecture-diagram">
--- Identify products currently operating below safety stock threshold
-SELECT 
-    w.facility_code,
-    p.sku_code,
-    p.product_name,
-    i.stock_on_hand,
-    i.safety_stock_lvl,
-    (i.safety_stock_lvl - i.stock_on_hand) AS units_needed,
-    s.company_name AS primary_supplier,
-    s.lead_time_days
-FROM INVENTORY i
-JOIN PRODUCTS p ON i.product_id = p.product_id
-JOIN WAREHOUSES w ON i.warehouse_id = w.warehouse_id
-JOIN SUPPLIERS s ON p.primary_supplier_id = s.supplier_id
-WHERE i.stock_on_hand &lt; i.safety_stock_lvl
-ORDER BY (i.safety_stock_lvl - i.stock_on_hand) DESC;
           </div>
         </section>
 
-        <!-- Block 3: Business Intelligence & Dashboards -->
+        <!-- Block 3: The Vibecoding Process -->
         <section class="case-study-block">
-          <h3>3. Power BI Executive Dashboard</h3>
+          <h3>3. The Vibecoding Process</h3>
           <p>
-            Connecting the MySQL database directly to Microsoft Power BI, I engineered dynamic executive and operational reports utilizing DAX (Data Analysis Expressions). Key metrics and visual components included:
+            Vibecoding is about more than just asking AI to write code. It's a skill that requires:
           </p>
-
-          <!-- Visual Dashboard Demonstration -->
-          <div class="dashboard-visual-card">
-            <div class="dashboard-visual-header">
-              <span class="dashboard-pill">Executive Telemetry &bull; Power BI</span>
-              <span class="dashboard-caption">Live simulation: Multi-facility inventory turnover &amp; supplier fulfillment</span>
-            </div>
-            <img src="images/supply_chain_dashboard.jpg" alt="Interactive Power BI Executive Supply Chain Analytics Dashboard" class="dashboard-preview-img">
-          </div>
 
           <div class="grid-2" style="margin-top: 1.5rem;">
             <div class="glass-card">
-              <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Operational Inventory View</h4>
+              <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Clear Communication</h4>
               <p style="font-size: 0.95rem; margin-bottom: 0;">
-                Heatmap of stock levels across regional warehouses with automated conditional color triggers for items nearing minimum reorder thresholds.
+                Learning to describe design ideas, functionality, and structure in precise natural language so the AI can translate your vision into working code.
               </p>
             </div>
             <div class="glass-card">
-              <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">Vendor Scorecard</h4>
+              <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">Iterative Refinement</h4>
               <p style="font-size: 0.95rem; margin-bottom: 0;">
-                Calculated On-Time In-Full (OTIF) fulfillment rates per vendor, giving procurement teams leverage during contract renegotiations.
+                Building piece by piece, reviewing what was generated, providing feedback, and refining until the result matched my standards.
+              </p>
+            </div>
+            <div class="glass-card">
+              <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;">Critical Evaluation</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">
+                Not just accepting the first output, but understanding enough to recognize what works, what doesn't, and how to improve it.
+              </p>
+            </div>
+            <div class="glass-card">
+              <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">Technical Literacy</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 0;">
+                Gaining a working knowledge of HTML, CSS, and JavaScript fundamentals through hands-on experience and AI collaboration.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- Block 4: Quantifiable Results -->
+        <!-- Block 4: What I Learned -->
         <section class="case-study-block">
-          <h3>4. Quantifiable Business Impact</h3>
+          <h3>4. Skills Gained</h3>
           <p>
-            Upon deploying the database schema and dashboard model, the simulated enterprise demonstrated marked improvements across critical operational benchmarks:
+            This project taught me far more than web development. The skills I developed are directly transferable to my career goals:
           </p>
 
           <div class="kpi-stat-grid">
             <div class="kpi-card">
-              <div class="number">14.2%</div>
-              <div class="desc">Reduction in Excess Inventory Holding Costs</div>
+              <div class="number" style="font-size: 1.6rem;">AI Collaboration</div>
+              <div class="desc">Learning to work with AI as a thought partner and productivity tool</div>
             </div>
             <div class="kpi-card">
-              <div class="number">85%</div>
-              <div class="desc">Reduction in Monthly Reporting Generation Time</div>
+              <div class="number" style="font-size: 1.6rem;">Problem Solving</div>
+              <div class="desc">Debugging, iterating, and systematically improving toward a goal</div>
             </div>
             <div class="kpi-card">
-              <div class="number">99.4%</div>
-              <div class="desc">Stockout Prevention Reliability Rate</div>
+              <div class="number" style="font-size: 1.6rem;">Digital Literacy</div>
+              <div class="desc">Understanding how modern web technologies work together</div>
             </div>
           </div>
         </section>
 
-        <!-- Block 5: Managerial & AI Reflection -->
+        <!-- Block 5: Reflection -->
         <section class="case-study-block">
-          <h3>5. Managerial &amp; GenAI Takeaways</h3>
+          <h3>5. Why This Matters</h3>
           <div class="glass-card" style="border-left: 4px solid var(--accent-primary);">
             <p style="font-style: italic; color: var(--text-primary); font-size: 1.05rem;">
-              "In the era of Generative AI and automated systems, managerial judgment is the irreplaceable differentiator. The AI can generate code or analyze data, but the manager must define the system goals, validate data fidelity, and decide what performance is acceptable."
+              "The ability to work effectively with AI tools is not just a nice-to-have &mdash; it's becoming essential. Whether in accounting, information systems, or any professional field, knowing how to leverage technology to solve problems and communicate ideas is a skill that sets you apart."
             </p>
             <p style="margin-bottom: 0; font-size: 0.95rem;">
-              Executing this project reinforced the essential skills of an ISDS manager: writing precise system specifications, using AI pair programming to accelerate schema development, and critically evaluating technical deliverables against strategic business objectives.
+              Building this website showed me that the intersection of accounting and information systems isn't just academic theory &mdash; it's practical. The same analytical thinking I use in financial accounting applies to structuring a website, and the same communication skills I use as a bilingual tutor apply to vibecoding with AI. Every skill connects.
             </p>
           </div>
         </section>
@@ -247,7 +217,7 @@ ORDER BY (i.safety_stock_lvl - i.stock_on_hand) DESC;
           Stephanie Villatoro &bull; Featured Project
         </p>
         <p style="margin-bottom: 0; font-size: 0.85rem;">
-          &copy; 2026 Stephanie Villatoro. Built for ISDS 3100 &bull; Louisiana State University.
+          &copy; 2026 Stephanie Villatoro. Louisiana State University.
         </p>
       </div>
       <ul class="footer-links">
